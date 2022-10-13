@@ -8,7 +8,7 @@ import userswithloan from "../../../src/asset/userswithloan.png"
 import userswithsavings from "../../../src/asset/userswithsavings.png"
 import { CgSortAz} from "react-icons/cg"
 import UsersTable from './UsersTable'
-import Paginate from '../../hooks/paginate/Paginate'
+// import Paginate from '../../hooks/paginate/Paginate'
 
 
 
