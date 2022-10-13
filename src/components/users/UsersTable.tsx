@@ -66,7 +66,7 @@ function UsersTable() {
 
             </table>
         </div>
-            <Paginate/>
+            {/* <Paginate/> */}
             </>
     )
 }
