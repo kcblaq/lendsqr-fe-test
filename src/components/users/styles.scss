@@ -15,7 +15,8 @@
 //Usertable styles
 
 .tablemain{
-    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
     display: flex;
     justify-content: stretch;
     margin-top: 20px;
@@ -26,6 +27,7 @@
     
     table{
         width: 100%;
+        font-size: 12px;
         min-width: 500px;
         overflow-x: auto;
         border-collapse: collapse;
@@ -38,7 +40,7 @@
             color: #545F7D;
             font-weight: 600;
             font-size: 16px;
-            padding: 10px 20px;
+            padding: 8px;
         }
         thead{
             margin-bottom: 40px;
@@ -49,6 +51,7 @@
         }
         th,td, table{
             text-align: left;
+            font-size: 12px;
             // border: 1px solid #545F7D;
             // border-collapse: collapse;
         }
@@ -60,7 +63,12 @@ tr{
     
 }
 
-
+.pagination {
+    justify-content: center;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+  }
 
 @media (max-width: 800px){
     .cards{

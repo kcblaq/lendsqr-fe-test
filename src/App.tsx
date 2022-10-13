@@ -21,6 +21,8 @@ function App() {
    <Route path='/login' element={<Login />} />
    <Route path='/dashboard' element={<DashboardComponent/> } />
    <Route path='/users' element={<Users/>} />
+   <Route path='/' element={<Users/>} />
+   
    <Route path='/personal' element={<SingleUser/>} />
    {/* <Route path='/layout' element={<MainLayout />} /> */}
   </Routes>
