@@ -1,0 +1,31 @@
+.cardmain{
+    width: 150px;
+    height: 120px;
+    background-color: #fff;
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    border-radius: 4px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    h1{
+        color:#213F7D;
+        font-size: 24px;
+    }
+    img{
+        height: 40px;
+        width: 40px;
+    }
+    h4{
+        color:#545F7D;
+        font-size: 14px;
+        font-family: work-sans;
+        font-weight: 500;
+    }
+    span{
+        color: #213F7D;
+        font-size: 24px;
+        font-weight: 600;
+    }
+}
