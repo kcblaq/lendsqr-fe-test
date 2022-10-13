@@ -11,15 +11,23 @@ function NavComponent() {
 
   return (
     <div className='nav'>
+      <Link to="/">
       <div className="logo">
         <img src={root + 'asset/logo.svg'} alt='logo' />
       </div>
+      </Link>
     <AiOutlineMenu className="mobileIcon " />
      <div className="navright">
-     <div className='searchbar' >
+     {/* <div className='searchbar' >
         <input type='text' className='search' placeholder='Search for anything' />
         <i className='iconm'>  <BiSearchAlt2 /></i>
 
+      </div> */}
+      <div className="sea">
+        {/* <div className="inputdiv"> */}
+          <input type='text' placeholder='Search for anthing'  />
+          {/* </div> */}
+        <div className='iconb'> <BiSearchAlt2 className='icon' /> </div>
       </div>
 
       <div className='setting' >

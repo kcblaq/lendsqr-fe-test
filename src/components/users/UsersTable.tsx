@@ -1,7 +1,8 @@
-import { log } from 'console';
 import React, { useEffect, useState } from 'react'
 import { CgSortAz } from "react-icons/cg"
 import "./styles.scss";
+import Pagination from 'react-responsive-pagination';
+import Paginate from '../../hooks/paginate/Paginate';
 
 function UsersTable() {
     const [data, setData] = useState([])
@@ -11,25 +12,20 @@ function UsersTable() {
         return correctdate
     }
 
-    // DateFormatter()
-
     useEffect(() => {
         fetch('https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users')
             .then((res) => res.json())
             .then((response) => setData(response))
-
-
-
-
 
     }, [data])
 
     localStorage.setItem("detail", JSON.stringify(data))
     const mdata = JSON.parse(localStorage.getItem('detail') || '[]')
 
-console.log(data)
+    console.log(data)
 
     return (
+        <>
         <div className='tablemain' >
             <table >
                 <thead>
@@ -70,7 +66,31 @@ console.log(data)
 
             </table>
         </div>
+            <Paginate/>
+            </>
     )
 }
 
 export default UsersTable
+
+
+
+// export  function PaginationMain() {
+
+//     const totalPages = 10;
+//     const [currentPage, setCurrentPage] = useState(1);
+  
+//     function handlePageChange(page: React.SetStateAction<number>) {
+//       setCurrentPage(page);
+//       // ... do something with `page`
+//     }
+  
+//     return (
+//       <Pagination
+//         total={totalPages}
+//         current={currentPage}
+//         onPageChange={page => handlePageChange(page)}
+//       />
+//     );
+//   }
+  
