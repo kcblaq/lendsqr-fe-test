@@ -102,7 +102,7 @@ function MainLayout({ children }: any) {
                 </NavLink>
 
                 <h4 className='title'>Customers </h4>
-                {businesses.map((customer, i) => {
+                {customers.map((customer, i) => {
                     return (
                         <NavLink to={customer.to} key={i} className='singleitem'
                             style={({ isActive }) => isActive ? isActiveStyle : {}}
@@ -116,7 +116,7 @@ function MainLayout({ children }: any) {
                 })}
 
                 <h4 className='title'>Businesses </h4>
-                {customers.map((business, i) => {
+                {businesses.map((business, i) => {
                     return (
                         <NavLink to={business.to} key={i} className='singleitem'
                             style={({ isActive }) => isActive ? isActiveStyle : {}}
