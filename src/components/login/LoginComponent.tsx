@@ -13,7 +13,7 @@ import {Link, useNavigate} from "react-router-dom"
 function LoginComponent() {
 const [type, setType] = useState('password')
 const [email, setEmail] = useState('')
-const [password, setPasswor] = useState('')
+const [password, setPassword] = useState('')
 
 const navigate = useNavigate()
 
@@ -31,13 +31,17 @@ const navigate = useNavigate()
    
    <form>
     <input type='email' placeholder='Email' value={email}   onChange={(e) => setEmail(e.target.value)}/>
-   <input type={type}  placeholder='Password' value={password} onChange={(e) => setPasswor(e.target.value)} />
+   <span className="passwordinput">
+   <input type={type}  placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+   { type === 'password' ? <span onClick={()=> setType('text')} >SHOW </span> : <span onClick={()=> setType('password')} >HIDE </span>}
+   
+   </span>
   
  
     
   
     <Link to='/reset' className='reset'> FORGOT PASSWORD?  </Link>
-    <button onClick={() => navigate('/dashboard')} type="button" className='btn'> LOG IN</button>
+    <button onClick={() => navigate('/users')} type="button" className='btn'> LOG IN</button>
    </form>
      </section>
     </div>

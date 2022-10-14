@@ -1,5 +1,6 @@
 import React from 'react'
 import "./layout.scss"
+import NavPage from '../../pages/NavPage'
 import { FaSuitcase } from "react-icons/fa"
 import { Link, NavLink } from "react-router-dom"
 import { RiHome4Line } from "react-icons/ri"
@@ -72,6 +73,9 @@ const settings = [
 
 function MainLayout({ children }: any) {
     return (
+        <>
+        <NavPage />
+        
         <div className='mainlayout'>
             <section className='mainleft'>
                 <details >
@@ -90,7 +94,7 @@ function MainLayout({ children }: any) {
                     className='singleitem'
                 >
                     <div className="item">
-                        <RiHome4Line />
+                        <RiHome4Line  />
                         <h5> Dashboard</h5>
 
                     </div>
@@ -104,7 +108,7 @@ function MainLayout({ children }: any) {
                             style={({ isActive }) => isActive ? isActiveStyle : {}}
                         >
                             <div className="item">
-                                <img src={customer.icon} alt="" />
+                                <img src={customer.icon} alt=""  />
                                 <h5>{customer.title} </h5>
                             </div>
                         </NavLink>
@@ -141,11 +145,12 @@ function MainLayout({ children }: any) {
 
             </section>
             <section className='mainright'>
-                {/* <h2> Right  section</h2> */}
+               
                 {children}
             </section>
 
         </div>
+        </>
     )
 }
 

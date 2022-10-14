@@ -14,8 +14,7 @@ function App() {
   return (
    <div className="main">
     <BrowserRouter>
-  
-  <Nav/>
+  {/* <Nav/> */}
   <Routes>
    
    <Route path='/login' element={<Login />} />

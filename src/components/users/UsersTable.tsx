@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { CgSortAz } from "react-icons/cg"
 import "./styles.scss";
+import { AiOutlineMore} from "react-icons/ai"
 import Pagination from 'react-responsive-pagination';
 import Paginate from '../../hooks/paginate/Paginate';
 
@@ -30,12 +31,12 @@ function UsersTable() {
             <table >
                 <thead>
                     <tr>
-                        <th> Organization <CgSortAz /> </th>
-                        <th> Username <CgSortAz /> </th>
-                        <th> Email <CgSortAz /> </th>
-                        <th> Phone Number <CgSortAz /> </th>
-                        <th> Date Joined <CgSortAz /> </th>
-                        <th> Status <CgSortAz /> </th>
+                        <th> Organization <CgSortAz  className='filter'/> </th>
+                        <th> Username <CgSortAz  className='filter'/> </th>
+                        <th> Email <CgSortAz className='filter' /> </th>
+                        <th> Phone Number <CgSortAz className='filter' /> </th>
+                        <th> Date Joined <CgSortAz  className='filter'/> </th>
+                        <th> Status <CgSortAz className='filter' /> </th>
                         <th> </th>
                     </tr>
                 </thead>
@@ -58,7 +59,7 @@ function UsersTable() {
 
                             <td>{info.education.employmentStatus} </td>
 
-                            <td> Omeke</td>
+                            <td> <AiOutlineMore/> </td>
 
                         </tr>
                     </tbody>
