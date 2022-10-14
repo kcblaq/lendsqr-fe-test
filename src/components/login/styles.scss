@@ -28,6 +28,14 @@ width: 60%;
     height: 30px;
     width: 40%;
 }
+// .passwordinput{
+//     width: 100%;
+//     border: 1px solid red;
+//     input{
+//         width: 93%;
+//         // margin-right: 30px;
+//     }
+// }
 .right{
 display: flex;
 flex-direction: column;
@@ -40,6 +48,10 @@ input {
     // width: 100%;
     margin-top: 20px;
 }
+
+
+
+
 p {
     color: #545F7D;
     font-size: 20px;
@@ -64,6 +76,44 @@ form{
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    .passwordinput{
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid black;
+        border-radius: 4px;
+        align-items: center;
+        margin-top: 20px;
+        height: 30px;
+        padding-right: 30px;
+
+        input:focus{
+            border: none;
+            outline: none;
+        }
+       
+
+        input{
+            height: 10px;
+            margin-top: 0px;
+            width: 80%;
+            border: none;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+
+            :focus{
+                outline: none;
+                border: none;
+            }
+        }
+        .passwordinput  input:focus{
+            outline: none;
+        }
+        span{
+            font-size: 14px;
+            color: $primary;
+            cursor: pointer;
+        }
+    }
     
 }
 .btn{
